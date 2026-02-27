@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Vikesh Vij - Liposuction & Body Contouring in Dubai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #967d53;
+            /* Gold/Bronze */
+            --primary-light: #b09164;
+            --dark: #111111;
+            --dark-accent: #1a1a1a;
+            --light: #f9f9f9;
+            --white: #ffffff;
+            --gray: #777777;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --serif: 'Cormorant Garamond', serif;
+            --sans: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            background-color: var(--white);
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: var(--serif);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+        }
+
+        .highlight {
+            color: var(--primary);
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(17, 17, 17, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(150, 125, 83, 0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .btn-nav {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .btn-nav:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            box-shadow: 0 10px 20px rgba(150, 125, 83, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--dark);
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero_bg.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        /* Surgeon Section */
+        .surgeon {
+            background: var(--light);
+        }
+
+        .surgeon-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .surgeon-img {
+            position: relative;
+        }
+
+        .surgeon-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 20px 20px 0px var(--primary);
+        }
+
+        .surgeon-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .surgeon-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        /* Services / Pain Points */
+        .services {
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--dark);
+            color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+        }
+
+        .service-card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            transition: var(--transition);
+        }
+
+        .service-card:hover img {
+            opacity: 0.6;
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            position: relative;
+            z-index: 1;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            position: relative;
+            z-index: 1;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Benefits */
+        .benefits {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 3rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .benefit-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Tech Table */
+        .tech-section {
+            background: var(--light);
+        }
+
+        .tech-table-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th {
+            text-align: left;
+            padding: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            font-family: var(--serif);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+
+        td {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            font-family: var(--serif);
+            font-size: 5rem;
+            color: rgba(150, 125, 83, 0.1);
+            line-height: 1;
+        }
+
+        .stars {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .patient-info h4 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .patient-info span {
+            font-size: 0.8rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Consultation Form */
+        .consultation {
+            background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.8)), url('img/form_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+        }
+
+        .form-card {
+            background: var(--white);
+            color: var(--dark);
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-info {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-info h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .form-info p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .consultation-form {
+            padding: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: var(--sans);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--dark-accent);
+            color: var(--white);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--white);
+            text-align: left;
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 5rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: var(--serif);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-info {
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 3rem;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--white);
+            max-width: 500px;
+            width: 90%;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            padding: 3rem;
+            transform: translateY(-20px);
+            transition: var(--transition);
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--dark);
+            line-height: 1;
+        }
+
+        .benefit-icon-number {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        @media (max-width: 968px) {
+            .surgeon-content {
+                grid-template-columns: 1fr;
+            }
+
+            .form-card {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">DR. VIKESH VIJ</a>
+            <div class="nav-links">
+                <button class="btn-nav" id="open-modal">BOOK AN APPOINTMENT</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>TRANSFORM YOUR BODY,<br><span class="highlight">BOOST YOUR CONFIDENCE</span></h1>
+            <p>Expert Liposuction & Body Contouring in Dubai</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary open-modal-trigger">Free Consultation</button>
+                <a href="#specialized-procedures" class="btn btn-outline">Our Procedures</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Surgeon Section -->
+    <section class="surgeon" id="about">
+        <div class="container surgeon-content">
+            <div class="surgeon-img">
+                <img src="img/dr_vij.png" alt="Dr. Vikesh Vij">
+            </div>
+            <div class="surgeon-text">
+                <h2 class="serif">Meet Your Surgeon: <span class="highlight">Dr. Vikesh Vij</span></h2>
+                <p>With over 10 years of experience as a double board-certified plastic surgeon, Dr. Vikesh Vij
+                    specializes in liposuction and body contouring for individuals seeking peak confidence and
+                    transformation.</p>
+                <p>Known for meticulous attention to detail, he ensures every procedure is safe, effective, and designed
+                    to enhance your natural beauty through artistic precision.</p>
+                <div class="hero-cta" style="justify-content: flex-start; margin-top: 2rem;">
+                    <button class="btn btn-primary open-modal-trigger" style="padding: 1rem 2rem;">SPEAK WITH DR.
+                        VIJ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Pain Points -->
+    <section class="services" id="specialized">
+        <div class="container">
+            <div class="section-header">
+                <h2>Are You Tired of Stubborn Fat?</h2>
+                <p style="color: var(--gray); max-width: 800px; margin: 0 auto;">You invest in your health, your career,
+                    and your family—yet certain areas just don't reflect the work you put in.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="img/lipo.png" alt="Stubborn Zones">
+                    <h3>The "Stubborn" Zone</h3>
+                    <p>Pockets of fat on the abdomen, flanks, or thighs that seem immune to the gym.</p>
+                </div>
+                <div class="service-card">
+                    <img src="img/hero_bg.png" alt="Wardrobe">
+                    <h3>Wardrobe Limitations</h3>
+                    <p>Avoiding certain silhouettes or feeling self-conscious in premium swimwear.</p>
+                </div>
+                <div class="service-card">
+                    <img src="img/form_bg.png" alt="Post-Pregnancy">
+                    <h3>Post-Pregnancy Shift</h3>
+                    <p>Struggling to regain your pre-baby contour despite a healthy lifestyle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: var(--white);">Why Choose Our Services?</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon-number">01</div>
+                    <h3>Board-Certified</h3>
+                    <p>Double board-certified expertise in body contouring procedures.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon-number">02</div>
+                    <h3>Advanced Tech</h3>
+                    <p>State-of-the-art VASER® and HD Sculpting equipment.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon-number">03</div>
+                    <h3>Minimal Downtime</h3>
+                    <p>Optimized recovery protocols for a fast return to life.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon-number">04</div>
+                    <h3>Permanent Results</h3>
+                    <p>Long-lasting fat reduction and precision sculpting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology -->
+    <section class="tech-section" id="specialized-procedures">
+        <div class="container">
+            <div class="section-header">
+                <h2>Specialized Procedures</h2>
+                <p style="color: var(--gray);">We utilize the gold standard in fat-removal technology for smoother skin
+                    retraction.</p>
+            </div>
+            <div class="tech-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Technology</th>
+                            <th>How It Works</th>
+                            <th>The Benefit to You</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>VASER® Lipo</strong></td>
+                            <td>Gentle ultrasound-assisted fat removal for smooth contours and minimal trauma.</td>
+                            <td>Minimal bruising, smoother results, and faster healing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Power-Assisted</strong></td>
+                            <td>Less traumatic fat extraction with higher accuracy.</td>
+                            <td>High precision and shorter surgical time.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HD Sculpting</strong></td>
+                            <td>Advanced techniques to define muscle shadows (like the "ab-etching" look).</td>
+                            <td>A toned, athletic appearance rather than just "thinness."</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>PATIENT EXPERIENCES</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="img/google_logo.png" alt="Google Review" style="width: 25px; margin-bottom: 1rem;">
+                    <div class="stars">★★★★★</div>
+                    <p>Dr. Vij's expertise and care made all the difference. The results exceeded my expectations and I
+                        feel more confident than ever.</p>
+                    <div class="patient-info">
+                        <h4>PATIENT 1</h4>
+                        <span>DUBAI, UAE</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>The precision and attention to detail shown by Dr. Vij is unmatched. The recovery was swift and
+                        the result is perfectly natural.</p>
+                    <div class="patient-info">
+                        <h4>PATIENT 2</h4>
+                        <span>DUBAI, UAE</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>I highly recommend Dr. Vij for anyone looking for body contouring. The whole team made me feel
+                        safe and well-cared for.</p>
+                    <div class="patient-info">
+                        <h4>PATIENT 3</h4>
+                        <span>DUBAI, UAE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation -->
+    <section class="consultation" id="consultation-form">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-info">
+                    <h2 class="serif">SCHEDULE A CONSULTATION</h2>
+                    <p>Speak directly with Dr. Vikesh Vij. Limited slots available each week for clinical assessments.
+                    </p>
+                    <p style="margin-top: 2rem; color: var(--primary); font-weight: 600;">✓ Clinical Assessment</p>
+                    <p style="color: var(--primary); font-weight: 600;">✓ Technical Evaluation</p>
+                    <p style="color: var(--primary); font-weight: 600;">✓ Personalized Plan</p>
+                </div>
+                <div class="consultation-form">
+                    <form id="consultation-form-element">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="+971 XX XXX XXXX">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">REQUEST APPOINTMENT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Popup -->
+    <div class="modal" id="appointment-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <h2 class="serif" style="margin-bottom: 1rem; color: var(--dark);">Book Appointment</h2>
+            <p style="margin-bottom: 2rem; font-size: 0.9rem; color: var(--gray);">Private assessment with Dr. Vikesh
+                Vij.</p>
+            <form id="modal-form">
+                <div class="form-group">
+                    <label for="m-name">Full Name</label>
+                    <input type="text" id="m-name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="m-email">Email Address</label>
+                    <input type="email" id="m-email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="m-phone">Phone Number</label>
+                    <input type="tel" id="m-phone" required placeholder="+971 XX XXX XXXX">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SEND REQUEST</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>FREQUENTLY ASKED</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is liposuction safe? <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, our board-certified surgeon uses advanced techniques for maximum safety. With over 10
+                            years of experience and state-of-the-art technology, we ensure the highest standards of
+                            patient care.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long is recovery? <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most patients resume daily activities within a few days, with full results visible in weeks.
+                            The exact timeline depends on the areas treated and your individual healing process.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are results permanent? <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>With a healthy lifestyle, your new contours are long-lasting. Fat cells removed through
+                            liposuction do not regenerate, but maintaining a stable weight is important for optimal
+                            results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">DR. VIKESH VIJ</span>
+            <p class="footer-info">Board-Certified Plastic Surgeon<br>Dubai, UAE</p>
+            <p class="copyright">&copy; <span id="year"></span> Dr. Vikesh Vij. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+                const icon = button.querySelector('span');
+                icon.textContent = item.classList.contains('active') ? '-' : '+';
+            });
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('appointment-modal');
+        const openModalBtn = document.getElementById('open-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const triggers = document.querySelectorAll('.open-modal-trigger');
+
+        const openModal = () => {
+            modal.style.display = 'flex';
+            setTimeout(() => modal.classList.add('active'), 10);
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 400);
+        };
+
+        openModalBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        triggers.forEach(t => t.addEventListener('click', openModal));
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Form Submission
+        const handleForm = (id) => {
+            document.getElementById(id).addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you! Your request has been sent.');
+                closeModal();
+                e.target.reset();
+            });
+        };
+
+        handleForm('consultation-form-element');
+        handleForm('modal-form');
+    </script>
+</body>
+
+</html>
